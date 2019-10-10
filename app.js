@@ -9,9 +9,6 @@ document.querySelector("#start").addEventListener("click", e => {
   recognition.start();
 });
 
-recognition.onstart = () => {
-  console.log("started");
-};
 document.querySelector("#stop").addEventListener("click", e => {
   e.preventDefault();
   isSpeaking = false;
