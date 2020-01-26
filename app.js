@@ -26,6 +26,13 @@ recognition.onresult = e => {
     recognition.stop();
   } else if (e.results[0][0].transcript === "reset") {
     document.querySelector("ul").innerHTML = "";
+  } else if (e.results[0][0].transcript === "book a movie ticket") {
+    window.open("http://www.bookmyshow.com");
+  } else if (e.results[0][0].transcript == "who is Chintu") {
+    let li = document.createElement("li");
+    li.className = "list-group-item";
+    li.innerText = "Chintu is don";
+    document.querySelector("ul").append(li);
   } else {
     let li = document.createElement("li");
     li.className = "list-group-item";
